@@ -80,8 +80,9 @@ public class DetailActivity extends AppCompatActivity {
             aka.setText(convertListToString(sandwich.getAlsoKnownAs()));
         }
         else {
-            LinearLayout akaSection = findViewById(R.id.akaSection);
-            akaSection.setVisibility(LinearLayout.GONE);
+            TextView akaLabel = findViewById(R.id.also_known_tv);
+            akaLabel.setVisibility(TextView.GONE);
+            aka.setVisibility(TextView.GONE);
         }
         if (!sandwich.getIngredients().isEmpty()) {
             ingredients.setText(convertListToString(sandwich.getIngredients()));
